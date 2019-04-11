@@ -10,8 +10,11 @@ try {
     {
         echo 'Conexion exitosa';
         $val = $mbd->prepare('select * from persona');
-        $result=$val->execute();
+        $val->execute();
+        $result=$val->fetchAll();
+        echo '<pre>';
         var_dump($result);
+        echo '</pre>';
         
     }
     
